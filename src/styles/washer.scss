@@ -1,0 +1,30 @@
+.washer-list {
+  @apply grid grid-cols-1 gap-4;
+
+  @screen md {
+    @apply grid grid-cols-4;
+  }
+}
+
+.washer-card {
+  @apply rounded shadow-sm px-4 py-6 flex bg-white items-start;
+}
+
+.washer-info {
+  @apply hidden relative;
+  transition: all 0.5s;
+
+  .container {
+    @apply bg-white p-4 mx-2 rounded-md relative max-w-[500px];
+
+    .btn-close {
+      @apply absolute right-5 top-5;
+    }
+  
+  }
+
+  &.open {
+    @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-70;
+    @apply flex items-center justify-center p-4 z-10;
+  }
+}
